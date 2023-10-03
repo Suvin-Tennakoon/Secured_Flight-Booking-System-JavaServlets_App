@@ -22,6 +22,11 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class DisapproveSeats extends HttpServlet {
 
+    private final void readObject(ObjectInputStream in) throws java.io.IOException {
+
+        throw new java.io.IOException("CBD");            }
+
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
