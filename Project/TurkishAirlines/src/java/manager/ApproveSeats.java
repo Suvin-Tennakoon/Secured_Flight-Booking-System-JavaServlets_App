@@ -38,7 +38,7 @@ public class ApproveSeats extends HttpServlet {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                     String body = reader.lines().collect(Collectors.joining());
                     return body;
-                }
+                 }
         
         f.setOldESeats(0);
         f.setOldBSeats(0);
