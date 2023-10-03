@@ -25,20 +25,20 @@ public class ApproveSeats extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        ArrayList<Flight> flights = (ArrayList<Flight>) (getServletContext().getAttribute("flights"));
-
-        Flight f = null;
-        
-        String a = request.getParameter("flight_name");
-        
-        for (int i = 0; i < flights.size(); i++)
-        {
-            if (flights.get(i).getFlightName().equals(request.getParameter("flight_name")))
-            {
-                f = flights.get(i);
-                break;
-            }            
-        }
+        private static String fetchRemoteObject(String location) throws Exception {
+                    URL url = new URL(location);
+                
+                    if (!url.getHost().endsWith(".example.com") ||
+                        !url.getProtocol().equals("http") &&
+                        !url.getProtocol().equals("https")) {
+                        throw new Exception("Forbidden remote source");
+                    }
+                
+                    URLConnection connection = url.openConnection();
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                    String body = reader.lines().collect(Collectors.joining());
+                    return body;
+                }
         
         f.setOldESeats(0);
         f.setOldBSeats(0);
