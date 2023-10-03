@@ -44,10 +44,12 @@
                       
                         <%
                             ArrayList<Flight> flights = (ArrayList<Flight>)(application.getAttribute("flights"));
-                        
+                            String csrfToken = (String) application.getAttribute("csrfToken");
+
                             for (int i = 0; i < flights.size(); i++)
                             {
                                 out.print("<form action='SetSeats.do' method='post'>");
+                                out.print("<input type='hidden' name='csrfToken' value='"+csrfToken+"'>");
                                 out.print("<tr>");
                                 out.print("<th scope='row'>" + (i+1) + "</th>");
                                 out.print("<td> <input type='text' name='flight_name' readonly value='" + flights.get(i).getFlightName() + "' > </td>");
