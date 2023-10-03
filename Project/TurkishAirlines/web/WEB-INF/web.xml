@@ -184,32 +184,6 @@
         <welcome-file>home.jsp</welcome-file>
     </welcome-file-list>
     <security-constraint>
-        <display-name>Admin Resources</display-name>
-        <web-resource-collection>
-            <web-resource-name>Change Features</web-resource-name>
-            <description/>
-            <url-pattern>/ChangeFeatures.jsp</url-pattern>
-            <url-pattern>/SetSeats.jsp</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <description/>
-            <role-name>Admin</role-name>
-        </auth-constraint>
-    </security-constraint>
-    <security-constraint>
-        <display-name>Manager Resources</display-name>
-        <web-resource-collection>
-            <web-resource-name>Approve Features</web-resource-name>
-            <description/>
-            <url-pattern>/ApproveFeatures.jsp</url-pattern>
-            <url-pattern>/ApproveSeats.jsp</url-pattern>
-        </web-resource-collection>
-        <auth-constraint>
-            <description/>
-            <role-name>Manager</role-name>
-        </auth-constraint>
-    </security-constraint>
-    <security-constraint>
         <display-name>Restricted Servlets and JSPS</display-name>
         <web-resource-collection>
             <web-resource-name>Restricted Servlets</web-resource-name>
