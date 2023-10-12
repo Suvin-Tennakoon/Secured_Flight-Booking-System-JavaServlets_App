@@ -183,7 +183,7 @@
     <welcome-file-list>
         <welcome-file>home.jsp</welcome-file>
     </welcome-file-list>
-    <security-constraint>
+      <security-constraint>
         <display-name>Admin Resources</display-name>
         <web-resource-collection>
             <web-resource-name>Change Features</web-resource-name>
