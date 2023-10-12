@@ -52,6 +52,10 @@
 				                        	<input required type="password" name="j_password" placeholder="Password..." class="form-password form-control" id="form-password">
 				                        </div>
 				                        <button style="margin-top:5%;" type="submit" class="btn">Sign in!</button>
+                                                        
+                                                        <button style="margin-top:5%;" type="button" class="btn"
+                                                                onclick="window.location.href='https://www.facebook.com/dialog/oauth?response_type=code&client_id=337893082020315&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2FTurkishAirlines%2FOAuthRedirect.jsp&scope=public_profile'">
+                                                            Sign with Facebook</button>
 				                    </form>
 			                    </div>
 		                    </div>		            
